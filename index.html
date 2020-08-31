@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide Show</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .CenterOBJ {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #container-slide {
+                width: 50vw;
+                height: 50vh;
+                border: solid 2px black;
+                border-radius: 20px;
+                background-color: black;
+                box-shadow: 0 20px 30px black;
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .action-button {
+                height: inherit;
+                width: 50px;
+                background-color: rgba(0,0,0,0);
+                color:rgba(0,0,0,0);
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                cursor: default;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                transition: 0.3s;
+                display: flex;
+                z-index: 1;
+            }
+
+            .action-button:hover {
+                background-color: rgba(0,0,0,0.5);
+                color:white;
+                cursor: pointer;
+            }
+
+            #action-button-previous {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            #container-items {
+                width: 50vw;
+                height: 50vh;
+                display: flex;
+                position: absolute;
+                background-color: red;
+                border-radius: 20px;
+                overflow: hidden;
+                
+            }
+
+            .itens {
+                width: 50vw;
+                height: 50vh;
+                transition: all 0.5s;
+            }
+
+            .itens:first-child {
+                margin-left: -100%;
+            }
+
+            .itens img {
+                width: inherit;
+                height: inherit;
+                border-radius: 20px;
+                
+            }
+
+            
+            
+
+            #action-button-next {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container-slide" class="CenterOBJ">
+            <div class="action-button" id="action-button-previous">
+                &laquo
+            </div>
+
+            <div id="container-items">
+                
+            </div>
+
+            
+
+            <div class="action-button" id="action-button-next">
+                &raquo
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
